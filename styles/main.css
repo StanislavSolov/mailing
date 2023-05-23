@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+body header fieldset {
+  width: fit-content;
+}
+body header #background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=main.css.map */

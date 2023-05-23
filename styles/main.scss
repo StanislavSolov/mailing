@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+
+  header {
+
+    fieldset {
+      width: fit-content;
+    }
+
+    #background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+}
