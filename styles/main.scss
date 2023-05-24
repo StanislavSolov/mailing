@@ -1,9 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
 body {
   height: 100vh;
   color: #fff;
   overflow: hidden;
 
   header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
 
     fieldset {
       width: fit-content;
@@ -16,6 +28,7 @@ body {
       height: 100%;
       width: 100%;
       z-index: -1;
+      filter: brightness(0.4);
     }
   }
 

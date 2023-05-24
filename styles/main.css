@@ -1,7 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
 body {
   height: 100vh;
   color: #fff;
   overflow: hidden;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
 }
 body header fieldset {
   width: fit-content;
@@ -13,6 +27,7 @@ body header #background {
   height: 100%;
   width: 100%;
   z-index: -1;
+  filter: brightness(0.4);
 }
 
 /*# sourceMappingURL=main.css.map */

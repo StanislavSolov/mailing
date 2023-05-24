@@ -1,3 +1,11 @@
+<?php
+  session_start();
+//  print_r($_SERVER['HTTP_USER_AGENT']);
+//  print_r($_SERVER['REQUEST_URI']);
+//  print_r($_SERVER['PHP_AUTH_USER']);
+//  print_r($_SERVER['REMOTE_ADDR']);
+//  print_r($_SERVER['HTTP_REFERER']);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,6 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mailing</title>
   <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <link rel="stylesheet" type="text/css" href="./styles/fonts.css">
 </head>
 <body>
 <nav></nav>
@@ -17,24 +26,24 @@
     <fieldset>
       <legend>Registration</legend>
       <div>
-        <label for="fullName">Your full name</label>
+        <label for="fullName">Your full name: </label>
         <input id="fullName" type="text" name="fullName" minlength="5" required>
       </div>
       <div>
-        <label for="email">Your email</label>
+        <label for="email">Your email: </label>
         <input id="email" type="email" name="email" minlength="5" required>
       </div>
       <div>
-        <label for="age">Your age</label>
-        <input id="age" type="number" name="age" required>
-      </div>
-      <div>
-        <label for="fullName">Password</label>
+        <label for="fullName">Password: </label>
         <input id="fullName" type="password" name="fullName" minlength="5" required>
       </div>
       <div>
-        <label for="fullName">Repeat your password</label>
+        <label for="fullName">Repeat your password: </label>
         <input id="fullName" type="password" name="fullName" minlength="5" required>
+      </div>
+      <div>
+        <label for="birth">Date of birth: </label>
+        <input id="birth" type="date" name="birth" required>
       </div>
       <div class="form-buttons">
         <button type="submit">Sign up</button>
