@@ -57,7 +57,7 @@
         <button type="reset">Clear form</button>
       </div>
     </fieldset>
-    <p>Already have an account? <a href="#">Sign in</a></p>
+    <p class="hint">Already have an account? <a href="#">Sign in</a></p>
   </form>
 </header>
 <script src="./scripts/main.js"></script>

@@ -17,8 +17,83 @@ body {
     width: 100%;
     flex-direction: column;
 
+    h1 {
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: dimgrey;
+      }
+    }
+
+    .hint {
+      margin-top: 10px;
+    }
+
     fieldset {
       width: fit-content;
+      padding: 20px 40px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border: 2px solid grey;
+
+      legend {
+        font-size: 18px;
+      }
+
+      & > div {
+        position: relative;
+        padding: 15px 0 0;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+      }
+
+      input {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid grey;
+        outline: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        padding: 7px 0;
+        background: transparent;
+
+        &:focus {
+          border-color: #fff;
+          transition: 200ms;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        display: block;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 8px 16px;
+        color: #fff;
+        border: 2px solid dimgrey;
+        background: transparent;
+        font-size: 16px;
+        border-radius: 5px;
+
+        &:hover {
+          background: dimgrey;
+          transition: 200ms;
+        }
+
+        &:active {
+          transform: scale(.8);
+        }
+      }
+
+
     }
 
     #background {

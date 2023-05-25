@@ -21,6 +21,13 @@ class User extends Person implements UserInterface
         $this->setDateOfBirth($birthDate);
     }
 
+    public function __clone()
+    {
+        $this->setFullName('User');
+        $this->setEmail('clonedUser');
+        $this->password = 'qwerty';
+    }
+
     public function getAge(): string
     {
         $dateOfBirth = self::getDateOfBirth();
