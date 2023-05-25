@@ -5,6 +5,8 @@
 //  print_r($_SERVER['PHP_AUTH_USER']);
 //  print_r($_SERVER['REMOTE_ADDR']);
 //  print_r($_SERVER['HTTP_REFERER']);
+//echo date('Y-m-d');
+//require_once 'php/classes/User.php';
 ?>
 <!doctype html>
 <html lang="en">
