@@ -1,4 +1,5 @@
 <?php
+//  session_destroy();
   session_start();
 //  print_r($_SERVER['HTTP_USER_AGENT']);
 //  print_r($_SERVER['REQUEST_URI']);
@@ -6,7 +7,11 @@
 //  print_r($_SERVER['REMOTE_ADDR']);
 //  print_r($_SERVER['HTTP_REFERER']);
 //echo date('Y-m-d');
+//use classes\User;
 //require_once 'php/classes/User.php';
+//$test = new User();
+//$test->setDateOfBirth('2003-12-22');
+//echo $test->getAge();
 ?>
 <!doctype html>
 <html lang="en">
@@ -36,12 +41,12 @@
         <input id="email" type="email" name="email" minlength="5" required>
       </div>
       <div>
-        <label for="fullName">Password: </label>
-        <input id="fullName" type="password" name="fullName" minlength="5" required>
+        <label for="password">Password: </label>
+        <input id="password" type="password" name="password" minlength="5" required>
       </div>
       <div>
-        <label for="fullName">Repeat your password: </label>
-        <input id="fullName" type="password" name="fullName" minlength="5" required>
+        <label for="password2">Repeat your password: </label>
+        <input id="password2" type="password" name="password2" minlength="5" required>
       </div>
       <div>
         <label for="birth">Date of birth: </label>
@@ -55,5 +60,6 @@
     <p>Already have an account? <a href="#">Sign in</a></p>
   </form>
 </header>
+<script src="./scripts/main.js"></script>
 </body>
 </html>

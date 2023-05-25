@@ -4,23 +4,24 @@ namespace classes;
 
 abstract class Person
 {
-    private $fullName, $dateOfBirth;
+    private string $fullName, $dateOfBirth;
 
-    public function getFullName() {
+    public function getFullName(): string
+    {
         return $this->fullName;
     }
 
-    public function getDateOfBirth()
+    public function getDateOfBirth(): string
     {
         return $this->dateOfBirth;
     }
 
-    public function setDateOfBirth($dateOfBirth)
+    public function setDateOfBirth(string $dateOfBirth): void
     {
         $this->dateOfBirth = $dateOfBirth;
     }
 
-    public function setFullName($fullName)
+    public function setFullName(string $fullName): void
     {
         $this->fullName = $fullName;
     }

@@ -4,5 +4,5 @@ namespace classes;
 
 interface UserInterface
 {
-    function getAge($birth);
+    function getAge(): string;
 }
