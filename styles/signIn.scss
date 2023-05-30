@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+body {
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    h1 {
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: dimgrey;
+      }
+    }
+
+    .hint {
+      margin-top: 10px;
+    }
+
+    fieldset {
+      width: fit-content;
+      padding: 20px 40px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border: 2px solid grey;
+
+      legend {
+        font-size: 18px;
+      }
+
+      & > div {
+        position: relative;
+        padding: 15px 0 0;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+      }
+
+      input {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid grey;
+        outline: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        padding: 7px 0;
+        background: transparent;
+        transition: .3s;
+
+        &:focus {
+          border-color: #fff;
+          transition: 200ms;
+        }
+
+        &.incorrect {
+          border-bottom: 2px solid orangered;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        display: block;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 8px 16px;
+        color: #fff;
+        border: 2px solid dimgrey;
+        background: transparent;
+        font-size: 16px;
+        border-radius: 5px;
+
+        &:hover {
+          background: dimgrey;
+          transition: 200ms;
+        }
+
+        &:active {
+          transform: scale(.8);
+        }
+      }
+
+
+    }
+
+    #background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+  }
+
+}

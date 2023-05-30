@@ -10,7 +10,7 @@ require_once 'Person.php';
 
 class User extends Person implements UserInterface
 {
-    private string $email, $password;
+    private string $email, $password, $avatar, $about;
     private int $id;
 
     public function __construct(string $fullName, string $email, string $password, string $birthDate)
@@ -69,5 +69,21 @@ class User extends Person implements UserInterface
     public function setId(int $id): void
     {
         $this->id = $id;
+    }
+
+    public function getAvatar(): string {
+        return $this->avatar;
+    }
+
+    public function setAvatar(string $path): void {
+        $this->avatar = $path;
+    }
+
+    public function getAbout(): string {
+        return $this->about;
+    }
+
+    public function setAbout(string $about): void {
+        $this->about = $about;
     }
 }

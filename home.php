@@ -2,7 +2,6 @@
 
 session_start();
 
-
 if (!$_SESSION['user']) {
     header('Location: ./signUp.php');
 }

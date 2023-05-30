@@ -23,6 +23,7 @@
   <title>Mailing</title>
   <link rel="stylesheet" type="text/css" href="styles/signUp.css">
   <link rel="stylesheet" type="text/css" href="./styles/fonts.css">
+  <link rel="icon" href="./imgs/icon.svg">
 </head>
 <body>
 <nav></nav>

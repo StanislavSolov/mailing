@@ -59,7 +59,7 @@ body header fieldset input:focus {
   border-color: #fff;
   transition: 200ms;
 }
-body header fieldset input.uncorrect {
+body header fieldset input.incorrect {
   border-bottom: 2px solid orangered;
 }
 body header fieldset label {
