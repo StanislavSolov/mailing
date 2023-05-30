@@ -21,7 +21,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mailing</title>
-  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/signUp.css">
   <link rel="stylesheet" type="text/css" href="./styles/fonts.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 <header>
   <h1>Welcome and have a nice day :)</h1>
   <img id="background" src="./imgs/background.jpg" alt="background">
-  <form action="./php/files/signup.php" method="post">
+  <form action="php/files/register.php" method="post">
     <fieldset>
       <legend>Registration</legend>
       <div>
@@ -57,9 +57,9 @@
         <button type="reset">Clear form</button>
       </div>
     </fieldset>
-    <p class="hint">Already have an account? <a href="#">Sign in</a></p>
+    <p class="hint">Already have an account? <a href="./signIn.php">Sign in</a></p>
   </form>
 </header>
-<script src="./scripts/main.js"></script>
+<script src="scripts/signUp.js"></script>
 </body>
 </html>

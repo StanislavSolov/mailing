@@ -53,10 +53,14 @@ body header fieldset input {
   color: #fff;
   padding: 7px 0;
   background: transparent;
+  transition: 0.3s;
 }
 body header fieldset input:focus {
   border-color: #fff;
   transition: 200ms;
+}
+body header fieldset input.uncorrect {
+  border-bottom: 2px solid orangered;
 }
 body header fieldset label {
   position: absolute;
@@ -89,4 +93,4 @@ body header #background {
   filter: brightness(0.4);
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=signUp.css.map */

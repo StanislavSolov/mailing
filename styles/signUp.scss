@@ -61,10 +61,15 @@ body {
         color: #fff;
         padding: 7px 0;
         background: transparent;
+        transition: .3s;
 
         &:focus {
           border-color: #fff;
           transition: 200ms;
+        }
+
+        &.uncorrect {
+          border-bottom: 2px solid orangered;
         }
       }
 
