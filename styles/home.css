@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  border: 3px solid #000;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: "Montserrat";
+  background: #0d1117;
+  color: #fff;
+}
+#home .discover {
+  border: 2px solid yellow;
+  width: 25%;
+}
+#home .main-content {
+  border: 2px solid red;
+  width: 55%;
+}
+#home .user-profile {
+  border: 2px solid green;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home .user-profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-top: 50px;
+}
+#home .user-profile fieldset {
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+#home .user-profile fieldset legend {
+  font-weight: 600;
+}
+#home .user-profile a {
+  width: 170px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid dimgrey;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+#home .user-profile a:hover {
+  background: dimgrey;
+  transition: 200ms;
+}
+#home .user-profile a:active {
+  transform: scale(0.8);
+}
+#home .user-profile a:visited {
+  color: #fff;
+}
+
+/*# sourceMappingURL=home.css.map */
