@@ -1,5 +1,4 @@
 <?php
-
 //  session_destroy();
 session_start();
 //  print_r($_SERVER['HTTP_USER_AGENT']);
@@ -36,14 +35,24 @@ session_start();
       <legend>Authorization</legend>
       <div>
         <label for="email">Your email: </label>
-        <input id="email" type="email" name="email" minlength="5" required>
+        <input id="email" type="email" name="email" minlength="5" required value="<?php
+        if (isset($_SESSION['userEmail'])):
+            echo $_SESSION['userEmail'];
+            unset($_SESSION['userEmail']);
+        endif; ?>"
+            <?php if (isset($_SESSION['email'])): ?>
+              class="incorrect"
+                <?php unset($_SESSION['email']);
+            endif; ?>
+        >
       </div>
       <div>
         <label for="password">Password: </label>
         <input id="password" type="password" name="password" minlength="5" required
             <?php if (isset($_SESSION['pass'])): ?>
               class="incorrect"
-            <?php endif; ?>
+                <?php unset($_SESSION['pass']);
+            endif; ?>
         >
       </div>
       <div class="form-buttons">

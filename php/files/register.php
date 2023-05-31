@@ -26,13 +26,13 @@ if (!$conn->query($sql)) {
     echo "Error 1: " . $conn->error;
 }
 
-$sql = "SELECT id FROM User WHERE email = '$email' AND password = '$pass'";
+$sql = "SELECT id, avatar FROM User WHERE email = '$email' AND password = '$pass'";
 
 if($result = $conn->query($sql)){
     foreach($result as $row){
-
-        $userid = $row["id"];
-        $user->setId($userid);
+        $user->setId($row["id"]);
+        $user->setAvatar($row['avatar']);
+        $user->setAbout('');
     }
 } else {
     echo "Error 2: " . $conn->error;
