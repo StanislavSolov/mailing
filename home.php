@@ -19,8 +19,9 @@ if (isset($user)) {
     // Встановлюємо бажаний часовий пояс
     date_default_timezone_set('Europe/Kiev');
     // Отримуємо поточну дату та час з урахуванням часового поясу
-    $currentDateTime = new DateTime('now');
-    $currentDate = $currentDateTime->format('Y-m-d');
+    $dateTime = new DateTime('now');
+    $currentDate = $dateTime->format('Y-m-d');
+    $currentDateTime = $dateTime->format('r');
 
     //Logs.txt
     $userEmail = $user->getEmail();
@@ -28,7 +29,7 @@ if (isset($user)) {
     $uri = $_SERVER['REQUEST_URI'];
     $ip = $_SERVER['REMOTE_ADDR'];
     $ref = $_SERVER['HTTP_REFERER'] ?? 'undefined';
-    $entryLine = "Date: $currentDate - IP: $ip | Agent: $agent | URL: $uri | Referrer: $ref | User: $userEmail \n\n\n";
+    $entryLine = "Datetime: $currentDateTime - IP: $ip | Agent: $agent | URL: $uri | Referrer: $ref | User: $userEmail \n\n\n";
     $fp = fopen("logs.txt", "a");
     fputs($fp, $entryLine);
     fclose($fp);
