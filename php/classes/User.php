@@ -30,11 +30,16 @@ class User extends Person implements UserInterface
 
     public function getAge(): string
     {
+        // Встановлюємо бажаний часовий пояс
+        date_default_timezone_set('Europe/Kiev');
+        // Отримуємо поточну дату та час з урахуванням часового поясу
+        $currentDateTime = new DateTime('now');
+        $currentDate = $currentDateTime->format('Y-m-d');
         $dateOfBirth = self::getDateOfBirth();
         if ($dateOfBirth) {
-            $date = new DateTime($dateOfBirth);
-            $currentDate = new DateTime(date('Y-m-d'));
-            $age = $date->diff($currentDate);
+            $dateBirth = new DateTime($dateOfBirth);
+            $date = new DateTime($currentDate);
+            $age = $dateBirth->diff($date);
             return $age->y;
         } else {
             throw new Error('There is no date of birth');

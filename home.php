@@ -7,10 +7,50 @@ if (!$_SESSION['user']) {
 }
 
 require 'php/classes/User.php';
+require './php/files/dbConfig.php';
 
 use classes\User;
 
+global $conn;
+
 $user = unserialize($_SESSION['user']);
+
+if (isset($user)) {
+    // Встановлюємо бажаний часовий пояс
+    date_default_timezone_set('Europe/Kiev');
+    // Отримуємо поточну дату та час з урахуванням часового поясу
+    $currentDateTime = new DateTime('now');
+    $currentDate = $currentDateTime->format('Y-m-d');
+
+    //Logs.txt
+    $userEmail = $user->getEmail();
+    $agent = $_SERVER['HTTP_USER_AGENT'];
+    $uri = $_SERVER['REQUEST_URI'];
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $ref = $_SERVER['HTTP_REFERER'] ?? 'undefined';
+    $entryLine = "Date: $currentDate - IP: $ip | Agent: $agent | URL: $uri | Referrer: $ref | User: $userEmail \n\n\n";
+    $fp = fopen("logs.txt", "a");
+    fputs($fp, $entryLine);
+    fclose($fp);
+
+    //Logs in DB
+    $sql = "DELETE FROM Logs WHERE (date != '$currentDate')";
+    $conn->query($sql);
+
+    $ipAddress = $_SERVER['REMOTE_ADDR'];
+    $sql = "SELECT * FROM Logs WHERE ipAddress = '$ipAddress'";
+    $res = $conn->query($sql);
+
+    if ($res->num_rows >= 1) {
+        foreach ($res as $row) {
+            $hits = $row['hits'];
+            $hits++;
+            $conn->query("UPDATE Logs SET hits = $hits WHERE ipAddress = '$ipAddress'");
+        }
+    } else {
+        $conn->query("INSERT INTO Logs (ipAddress, date, hits) VALUES ('$ipAddress', '$currentDate', 0)");
+    }
+}
 
 ?>
 <!doctype html>
